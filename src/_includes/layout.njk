@@ -17,14 +17,14 @@ description: The Romano Law Firm is dedicated to helping injury victims and thei
     <title>{{ title }}</title>
   </head>
   <body>
-    <nav class="bg-white border-gray-200">
+    <nav class="bg-white border-gray-200 shadow-sm">
       <div
         class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4"
       >
         <a href="#" class="flex items-center space-x-3 rtl:space-x-reverse">
           <img
             src="../../media/images/romano-law-firm-logo.webp"
-            class="lg:h-full md:h-16 h-14"
+            class="xl:h-full h-14"
             alt="The Romano Law Firm Logo"
           />
           <span
@@ -35,7 +35,7 @@ description: The Romano Law Firm is dedicated to helping injury victims and thei
         <button
           data-collapse-toggle="navbar-dropdown"
           type="button"
-          class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200"
+          class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg lg:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200"
           aria-controls="navbar-dropdown"
           aria-expanded="false"
         >
@@ -56,9 +56,9 @@ description: The Romano Law Firm is dedicated to helping injury victims and thei
             />
           </svg>
         </button>
-        <div class="hidden w-full md:block md:w-auto" id="navbar-dropdown">
+        <div class="hidden w-full lg:block lg:w-auto" id="navbar-dropdown">
           <ul
-            class="flex flex-col font-medium p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white "
+            class="flex flex-col xl:font-medium xl:text-base font-normal text-[15px] p-4 lg:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 lg:space-x-8 rtl:space-x-reverse lg:flex-row lg:mt-0 lg:border-0 lg:bg-white "
           >
             {% set navPages = collections.all | eleventyNavigation %}
             {% for entry in navPages %}
@@ -69,9 +69,9 @@ description: The Romano Law Firm is dedicated to helping injury victims and thei
                 data-dropdown-toggle="dropdownNavbar"
                 {% if entry.url == page.url %}
                 aria-current="page"
-                class="flex items-center justify-between w-full py-2 px-3 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0"
+                class="flex items-center justify-between w-full py-2 px-3 text-white bg-yellow-600 rounded lg:bg-transparent lg:text-yellow-600 lg:p-0 lg:underline lg:underline-offset-4"
                 {% else %}
-                class="flex items-center justify-between w-full py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 md:w-auto"
+                class="flex items-center justify-between w-full py-2 px-3 text-gray-900 rounded hover:bg-gray-100 lg:hover:bg-transparent lg:border-0 lg:hover:text-yellow-600 lg:p-0 lg:w-auto"
                 {% endif %}
               >
                 <a href="/about-us/" id="About">About</a>
@@ -102,58 +102,39 @@ description: The Romano Law Firm is dedicated to helping injury victims and thei
                 >
                   <li>
                     <a
-                      href="#"
+                      href="/personal-injury-law-firm-d-c/"
                       class="block px-4 py-2 hover:bg-gray-100"
-                      >Dashboard</a
+                      >Washington D.C.</a
                     >
                   </li>
                   <li>
                     <a
-                      href="#"
+                      href="/personal-injury-law-firm-tampa/"
                       class="block px-4 py-2 hover:bg-gray-100"
-                      >Settings</a
+                      >Tampa</a
                     >
                   </li>
                   <li>
                     <a
-                      href="#"
+                      href="/personal-injury-law-firm-tulsa/"
                       class="block px-4 py-2 hover:bg-gray-100"
-                      >Earnings</a
+                      >Tulsa</a
                     >
                   </li>
                 </ul>
               </div>
-              {% else %}
-              <a
-                href="{{ entry.url }}"
+              {% elif entry.key == "Auto Accidents Lawyer" %}
+              <button
+                id="dropdownNavbarLink2"
+                data-dropdown-toggle="dropdownNavbar2"
                 {% if entry.url == page.url %}
                 aria-current="page"
-                class="block py-2 px-3 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0"
+                class="flex items-center justify-between w-full py-2 px-3 text-white bg-yellow-600 rounded lg:bg-transparent lg:text-yellow-600 lg:p-0 lg:underline lg:underline-offset-4"
                 {% else %}
-                class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0"
+                class="flex items-center justify-between w-full py-2 px-3 text-gray-900 rounded hover:bg-gray-100 lg:hover:bg-transparent lg:border-0 lg:hover:text-yellow-600 lg:p-0 lg:w-auto"
                 {% endif %}
-                id="{{ entry.key }}"
-                >{{ entry.key }}</a
               >
-              {% endif %}
-            </li>
-            {% endfor %}
-
-            {# <li>
-              <a
-                href="#"
-                class="block py-2 px-3 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0"
-                aria-current="page"
-                >Home</a
-              >
-            </li>
-            <li>
-              <button
-                id="dropdownNavbarLink"
-                data-dropdown-toggle="dropdownNavbar"
-                class="flex items-center justify-between w-full py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 md:w-auto"
-              >
-                <a href="/about-us/" id="About">About</a>
+                <a href="/auto-accidents-lawyer/" id="Auto Accidents Lawyer">Auto Accidents Lawyer</a>
                 <svg
                   class="w-2.5 h-2.5 ms-2.5"
                   aria-hidden="true"
@@ -172,59 +153,51 @@ description: The Romano Law Firm is dedicated to helping injury victims and thei
               </button>
               <!-- Dropdown menu -->
               <div
-                id="dropdownNavbar"
-                class="z-10 hidden font-normal bg-white divide-y divide-gray-100 rounded-lg shadow w-44"
+                id="dropdownNavbar2"
+                class="hidden z-10 font-normal bg-white divide-y divide-gray-100 rounded-lg shadow w-44"
               >
                 <ul
                   class="py-2 text-sm text-gray-700 dark:text-gray-400"
-                  aria-labelledby="dropdownLargeButton"
+                  aria-labelledby="dropdownLargeButton2"
                 >
                   <li>
                     <a
-                      href="#"
+                      href="/auto-accident-lawyer-d-c/"
                       class="block px-4 py-2 hover:bg-gray-100"
-                      >Dashboard</a
+                      >D.C. Auto Accidents</a
                     >
                   </li>
                   <li>
                     <a
-                      href="#"
+                      href="/auto-accident-lawyer-tampa/"
                       class="block px-4 py-2 hover:bg-gray-100"
-                      >Settings</a
+                      >Tampa Auto Accidents</a
                     >
                   </li>
                   <li>
                     <a
-                      href="#"
+                      href="/auto-accident-lawyer-tulsa/"
                       class="block px-4 py-2 hover:bg-gray-100"
-                      >Earnings</a
+                      >Tulsa Auto Accidents</a
                     >
                   </li>
                 </ul>
-                
               </div>
-            </li> #}
-            <li>
+              {% else %}
               <a
-                href="#"
-                class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0"
-                >Services</a
+                href="{{ entry.url }}"
+                {% if entry.url == page.url %}
+                aria-current="page"
+                class="block py-2 px-3 text-white bg-yellow-600 rounded lg:bg-transparent lg:text-yellow-600 lg:p-0 lg:underline lg:underline-offset-4"
+                {% else %}
+                class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 lg:hover:bg-transparent lg:border-0 lg:hover:text-yellow-600 lg:p-0"
+                {% endif %}
+                id="{{ entry.key }}"
+                >{{ entry.key }}</a
               >
+              {% endif %}
             </li>
-            <li>
-              <a
-                href="#"
-                class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0"
-                >Pricing</a
-              >
-            </li>
-            <li>
-              <a
-                href="#"
-                class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0"
-                >Contact</a
-              >
-            </li>
+            {% endfor %}
           </ul>
         </div>
       </div>
