@@ -3,7 +3,28 @@
 @tailwind utilities;
 
 @layer base {
+  body {
+    @apply bg-yellow-50;
+  }
   h1 {
+    @apply my-8;
+    @apply text-4xl;
+    @apply font-medium;
     font-family: Georgia, "Times New Roman", Times, serif;
+  }
+
+  h2 {
+    @apply my-6;
+    @apply text-2xl;
+    @apply font-medium;
+    @apply text-gray-600;
+    font-family: Georgia, "Times New Roman", Times, serif;
+  }
+
+  h3 {
+    @apply my-4;
+    @apply text-xl;
+    @apply font-medium;
+    @apply text-gray-600;
   }
 }
