@@ -7,9 +7,10 @@
     @apply bg-yellow-50;
   }
   h1 {
-    @apply my-8;
-    @apply text-4xl;
+    @apply my-6;
+    @apply text-3xl;
     @apply font-medium;
+    @apply text-gray-700;
     font-family: Georgia, "Times New Roman", Times, serif;
   }
 
