@@ -27,5 +27,6 @@
     @apply text-xl;
     @apply font-medium;
     @apply text-gray-600;
+    font-family: Georgia, "Times New Roman", Times, serif;
   }
 }
